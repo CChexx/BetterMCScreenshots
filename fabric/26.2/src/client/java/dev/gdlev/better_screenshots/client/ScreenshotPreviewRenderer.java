@@ -337,6 +337,7 @@ public class ScreenshotPreviewRenderer {
         if (previewAboveScreen && isNonChatScreenOpen() && !renderingAboveScreenPass) return;
 
         ScreenshotConfig cfg = ScreenshotConfig.get();
+        if (cfg.previewDurationSeconds <= 0) return;
 
         int screenW    = context.guiWidth();
         int screenH    = context.guiHeight();
